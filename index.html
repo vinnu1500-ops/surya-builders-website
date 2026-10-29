@@ -7,576 +7,405 @@
 <meta name="description" content="Surya Architect and Builders, Gajwel, Siddipet district, Telangana. Construction, planning, building permissions, vastu designs, site inspections and structural designs since 2018. Call 92916 46358.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@500;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --ink: #14181f;
-    --ink-2: #1d232c;
-    --text: #2a2f36;
-    --muted: #6b7079;
-    --line: #e4ded3;
-    --paper: #faf8f4;
-    --white: #ffffff;
-    --gold: #b8913f;
-    --gold-light: #d9bd7e;
-    --serif: "Cormorant Garamond", Georgia, serif;
-    --sans: "Inter", system-ui, -apple-system, sans-serif;
-    --max: 1180px;
+    --red: #9a1a1f;
+    --red-dark: #7d1418;
+    --steel: #8aa4c0;
+    --heading: #5f5f5f;
+    --text: #3a3a3a;
+    --muted: #6d6d6d;
+    --line: #e6e6e6;
+    --bg: #ffffff;
+    --soft: #f6f4f1;
+    --serif: "Alegreya", Georgia, serif;
+    --sans: "Open Sans", system-ui, -apple-system, sans-serif;
+    --max: 1100px;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
-  body { font-family: var(--sans); color: var(--text); background: var(--paper); line-height: 1.65; font-size: 16px; overflow-x: hidden; }
-  a { color: inherit; text-decoration: none; }
+  body { font-family: var(--sans); font-weight: 300; color: var(--text); background: var(--bg); line-height: 1.6; font-size: 18px; overflow-x: hidden; }
+  a { color: inherit; }
   img { max-width: 100%; display: block; }
   .wrap { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
-  h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.15; color: var(--ink); }
-  .eyebrow { font-size: 12px; letter-spacing: .22em; text-transform: uppercase; color: var(--gold); font-weight: 600; display: inline-flex; align-items: center; gap: 12px; }
-  .eyebrow::before { content: ""; width: 32px; height: 1px; background: var(--gold); }
-  section { padding: 100px 0; }
-  .section-head { max-width: 640px; margin-bottom: 56px; }
-  .section-head h2 { font-size: clamp(34px, 4.5vw, 50px); margin: 14px 0 16px; }
-  .section-head p { color: var(--muted); font-size: 17px; }
-  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 15px 28px; font-size: 14px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; border: 1px solid transparent; cursor: pointer; transition: all .25s; font-family: var(--sans); }
-  .btn-gold { background: var(--gold); color: var(--white); }
-  .btn-gold:hover { background: #a37f33; }
-  .btn-outline { border-color: rgba(255,255,255,.45); color: var(--white); }
-  .btn-outline:hover { border-color: var(--gold-light); color: var(--gold-light); }
-  .btn svg { width: 18px; height: 18px; }
+  h1, h2, h3, h4 { font-family: var(--serif); font-weight: 700; line-height: 1.15; color: var(--heading); }
+  h2 { font-size: clamp(34px, 5vw, 50px); margin-bottom: 22px; }
+  h3 { font-size: clamp(26px, 3.4vw, 34px); margin-bottom: 16px; }
+  p { margin-bottom: 16px; }
+  section { padding: 72px 0; }
 
-  /* Header */
-  header { position: fixed; inset: 0 0 auto 0; z-index: 50; transition: background .3s, box-shadow .3s; }
-  header.scrolled { background: rgba(20,24,31,.97); box-shadow: 0 2px 20px rgba(0,0,0,.2); }
-  .nav { display: flex; align-items: center; justify-content: space-between; height: 84px; }
-  .brand { display: flex; align-items: center; gap: 12px; color: var(--white); }
-  .brand-mark { width: 44px; height: 44px; border: 1.5px solid var(--gold); display: grid; place-items: center; font-family: var(--serif); font-size: 24px; font-weight: 700; color: var(--gold-light); }
-  .brand-name { font-family: var(--serif); font-size: 22px; font-weight: 700; line-height: 1; letter-spacing: .02em; }
-  .brand-name small { display: block; font-family: var(--sans); font-size: 10px; font-weight: 500; letter-spacing: .25em; text-transform: uppercase; color: var(--gold-light); margin-top: 5px; }
-  .nav-links { display: flex; align-items: center; gap: 34px; list-style: none; }
-  .nav-links a { color: rgba(255,255,255,.85); font-size: 14px; font-weight: 500; letter-spacing: .04em; transition: color .2s; }
-  .nav-links a:hover { color: var(--gold-light); }
-  .nav-call { color: var(--white) !important; border: 1px solid var(--gold); padding: 10px 18px; }
-  .menu-btn { display: none; background: none; border: 0; color: var(--white); cursor: pointer; padding: 8px; }
-  .menu-btn svg { width: 28px; height: 28px; }
+  /* ---------- Top red menu ---------- */
+  header { position: sticky; top: 0; z-index: 50; background: var(--red); color: #fff; box-shadow: 0 2px 10px rgba(0,0,0,.18); }
+  .nav { display: flex; align-items: center; justify-content: space-between; gap: 24px; height: 88px; }
+  .brand { display: flex; flex-direction: column; text-decoration: none; color: #fff; line-height: 1; }
+  .brand b { font-family: var(--serif); font-size: 32px; font-weight: 800; letter-spacing: .06em; }
+  .brand small { font-family: var(--serif); font-size: 12px; letter-spacing: .28em; text-transform: uppercase; margin-top: 4px; }
+  .nav-links { display: flex; gap: 30px; list-style: none; align-items: center; }
+  .nav-links a { text-decoration: none; font-weight: 400; font-size: 16.5px; color: #fff; transition: opacity .2s; }
+  .nav-links a:hover, .nav-links a.active { opacity: .7; }
+  .nav-call { background: #fff; color: var(--red) !important; font-weight: 600 !important; padding: 9px 16px; }
+  .nav-call:hover { opacity: .9 !important; }
+  .menu-btn { display: none; background: none; border: 0; color: #fff; cursor: pointer; padding: 6px; }
+  .menu-btn svg { width: 30px; height: 30px; }
 
-  /* Hero */
-  .hero { position: relative; min-height: 100vh; display: flex; align-items: center; color: var(--white); background: var(--ink); overflow: hidden; padding: 140px 0 100px; }
-  .hero-bg { position: absolute; inset: 0; background:
-      linear-gradient(105deg, rgba(20,24,31,.97) 35%, rgba(20,24,31,.6) 100%),
-      url("images/hero.jpg") center/cover no-repeat, var(--ink-2); }
-  .hero-grid { position: absolute; inset: 0; opacity: .07;
-      background-image: linear-gradient(var(--gold-light) 1px, transparent 1px), linear-gradient(90deg, var(--gold-light) 1px, transparent 1px);
-      background-size: 64px 64px; }
-  .hero-drawing { position: absolute; right: -40px; bottom: 0; width: min(620px, 55vw); opacity: .5; }
-  .hero .wrap { position: relative; width: 100%; }
-  .hero-content { max-width: 680px; }
-  .hero h1 { color: var(--white); font-size: clamp(42px, 6.5vw, 78px); margin: 22px 0 24px; }
-  .hero h1 em { color: var(--gold-light); font-style: italic; }
-  .hero p { font-size: 18px; color: rgba(255,255,255,.75); max-width: 540px; margin-bottom: 40px; }
-  .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; }
-  .hero-stats { display: flex; flex-wrap: wrap; gap: 48px; margin-top: 72px; padding-top: 32px; border-top: 1px solid rgba(255,255,255,.12); }
-  .hero-stats div { font-size: 13px; color: rgba(255,255,255,.6); letter-spacing: .05em; }
-  .hero-stats strong { display: block; font-family: var(--serif); font-size: 36px; color: var(--gold-light); font-weight: 600; line-height: 1.1; }
-
-  /* Services */
-  .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
-  .service { padding: 44px 36px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--white); transition: background .3s; position: relative; }
-  .service:hover { background: var(--ink); }
-  .service:hover h3 { color: var(--white); }
-  .service:hover p { color: rgba(255,255,255,.65); }
-  .service-num { position: absolute; top: 28px; right: 32px; font-family: var(--serif); font-size: 18px; color: var(--line); }
-  .service-icon { width: 52px; height: 52px; color: var(--gold); margin-bottom: 26px; }
-  .service h3 { font-size: 26px; margin-bottom: 12px; transition: color .3s; }
-  .service p { color: var(--muted); font-size: 15px; transition: color .3s; }
-
-  /* About */
-  .about { background: var(--white); }
-  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
-  .about-visual { position: relative; aspect-ratio: 4/5; background: var(--ink-2); }
-  .about-visual .frame { position: absolute; inset: 24px -24px -24px 24px; border: 1.5px solid var(--gold); z-index: 0; }
-  .about-visual .inner { position: absolute; inset: 0; z-index: 1; background: linear-gradient(160deg, #232a35, #14181f); display: grid; place-items: center; overflow: hidden; background-size: cover; background-position: center; }
-  .about-visual .inner svg { width: 80%; opacity: .55; }
-  .about-badge { position: absolute; left: -24px; bottom: 40px; z-index: 2; background: var(--gold); color: var(--white); padding: 22px 28px; }
-  .about-badge strong { display: block; font-family: var(--serif); font-size: 40px; line-height: 1; }
-  .about-badge span { font-size: 12px; letter-spacing: .15em; text-transform: uppercase; }
-  .about-text h2 { font-size: clamp(34px, 4.5vw, 48px); margin: 14px 0 22px; }
-  .about-text > p { color: var(--muted); margin-bottom: 18px; font-size: 16.5px; }
-  .why-list { list-style: none; margin-top: 30px; display: grid; gap: 16px; }
-  .why-list li { display: flex; gap: 14px; align-items: flex-start; }
-  .why-list svg { flex: 0 0 22px; width: 22px; height: 22px; color: var(--gold); margin-top: 2px; }
-  .why-list strong { color: var(--ink); display: block; }
-  .why-list span { color: var(--muted); font-size: 15px; }
-
-  /* Process */
-  .process { background: var(--ink); color: var(--white); }
-  .process .section-head h2 { color: var(--white); }
-  .process .section-head p { color: rgba(255,255,255,.6); }
-  .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; counter-reset: step; }
-  .step { border-top: 1px solid rgba(255,255,255,.15); padding-top: 28px; }
-  .step::before { counter-increment: step; content: "0" counter(step); font-family: var(--serif); font-size: 44px; color: var(--gold-light); display: block; line-height: 1; margin-bottom: 18px; }
-  .step h3 { color: var(--white); font-size: 24px; margin-bottom: 10px; }
-  .step p { color: rgba(255,255,255,.6); font-size: 15px; }
-
-  /* Projects */
-  .projects-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; flex-wrap: wrap; margin-bottom: 40px; }
-  .projects-head .section-head { margin-bottom: 0; }
-  .filters { display: flex; gap: 8px; flex-wrap: wrap; }
-  .filter { background: none; border: 1px solid var(--line); padding: 9px 18px; font-family: var(--sans); font-size: 13px; font-weight: 500; color: var(--muted); cursor: pointer; transition: all .2s; }
-  .filter.active, .filter:hover { background: var(--ink); color: var(--white); border-color: var(--ink); }
-  .projects-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-  .project { position: relative; aspect-ratio: 4/3; overflow: hidden; background: var(--ink-2); cursor: pointer; }
-  .project.tall { grid-row: span 2; aspect-ratio: auto; }
-  .project .img { position: absolute; inset: 0; background-size: cover; background-position: center; transition: transform .6s; }
-  .project .img.placeholder { background: linear-gradient(150deg, #262d38, #161a21); display: grid; place-items: center; }
-  .project .img.placeholder svg { width: 62%; opacity: .45; }
-  .project:hover .img { transform: scale(1.05); }
-  .project-info { position: absolute; inset: auto 0 0 0; padding: 26px; background: linear-gradient(transparent, rgba(10,12,16,.92)); color: var(--white); }
-  .project-info span { font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: var(--gold-light); }
-  .project-info h3 { color: var(--white); font-size: 24px; margin-top: 4px; }
-  .project.hide { display: none; }
-  .photo-note { margin-top: 24px; font-size: 14px; color: var(--muted); text-align: center; }
-
-  /* Quote */
-  .quote { background: var(--white); }
-  .quote-grid { display: grid; grid-template-columns: 1fr 1.25fr; gap: 72px; }
-  .quote-side h2 { font-size: clamp(34px, 4.5vw, 48px); margin: 14px 0 20px; }
-  .quote-side > p { color: var(--muted); margin-bottom: 36px; }
-  .contact-cards { display: grid; gap: 14px; }
-  .contact-card { display: flex; gap: 18px; align-items: center; padding: 20px 22px; border: 1px solid var(--line); transition: border-color .2s; }
-  a.contact-card:hover { border-color: var(--gold); }
-  .contact-card .ic { flex: 0 0 46px; height: 46px; background: var(--paper); display: grid; place-items: center; color: var(--gold); }
-  .contact-card .ic svg { width: 22px; height: 22px; }
-  .contact-card small { display: block; font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); }
-  .contact-card strong { color: var(--ink); font-weight: 600; word-break: break-word; }
-  form { background: var(--paper); padding: 44px; border: 1px solid var(--line); }
-  form h3 { font-size: 30px; margin-bottom: 6px; }
-  form > p { color: var(--muted); font-size: 15px; margin-bottom: 28px; }
-  .row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
-  .field { margin-bottom: 18px; }
-  label { display: block; font-size: 12px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--ink); margin-bottom: 8px; }
-  input, select, textarea { width: 100%; padding: 14px 16px; font: inherit; font-size: 15px; color: var(--text); background: var(--white); border: 1px solid var(--line); border-radius: 0; outline: none; transition: border-color .2s; appearance: none; }
-  select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23b8913f' stroke-width='1.6' fill='none'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 16px center; padding-right: 40px; }
-  input:focus, select:focus, textarea:focus { border-color: var(--gold); }
-  textarea { min-height: 120px; resize: vertical; }
-  .form-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 8px; }
-  .form-actions .btn { flex: 1 1 200px; }
-  .btn-wa { background: #1f9d55; color: var(--white); }
+  /* ---------- Full-width photo hero ---------- */
+  /* Photos: save your images in the "images" folder with these names and they appear automatically. */
+  .photo { position: relative; background-color: #3b3530; background-size: cover; background-position: center; }
+  .hero { min-height: min(86vh, 720px); display: flex; align-items: flex-end; justify-content: center; text-align: center; color: #fff; padding: 120px 20px 56px;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 40%, rgba(0,0,0,.55)), url("images/hero.jpg"), linear-gradient(135deg, #5a4a3c, #2b2622); }
+  .hero-drawing { position: absolute; inset: 0; margin: auto; width: min(760px, 90%); opacity: .22; pointer-events: none; }
+  .hero-inner { position: relative; }
+  .hero h1 { color: #fff; font-size: clamp(36px, 5.6vw, 58px); text-shadow: 0 2px 14px rgba(0,0,0,.5); margin-bottom: 28px; }
+  .laurels { display: flex; justify-content: center; flex-wrap: wrap; gap: 18px 26px; }
+  .laurel { position: relative; width: 134px; height: 110px; display: grid; place-items: center; color: #fff; text-align: center; }
+  .laurel svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .laurel span { position: relative; font-family: var(--serif); font-size: 16px; line-height: 1.05; padding: 0 26px; text-shadow: 0 1px 6px rgba(0,0,0,.5); }
+  .hero-btns { margin-top: 30px; display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; font-family: var(--serif); font-size: 20px; font-weight: 500; padding: 13px 26px; text-decoration: none; border: 0; cursor: pointer; transition: background .2s; }
+  .btn svg { width: 20px; height: 20px; }
+  .btn-red { background: var(--red); color: #fff; }
+  .btn-red:hover { background: var(--red-dark); }
+  .btn-white { background: #fff; color: var(--red); }
+  .btn-white:hover { background: #f1eeee; }
+  .btn-steel { background: var(--steel); color: #fff; }
+  .btn-steel:hover { background: #7590ad; }
+  .btn-wa { background: #1f9d55; color: #fff; }
   .btn-wa:hover { background: #188a49; }
-  .btn-dark { background: var(--ink); color: var(--white); }
-  .btn-dark:hover { background: #000; }
-  .form-hint { font-size: 13px; color: var(--muted); margin-top: 14px; }
-  .error { color: #b3261e; font-size: 14px; margin-top: 10px; display: none; }
 
-  /* Map */
-  .map { padding: 0; height: 380px; background: var(--line); }
-  .map iframe { width: 100%; height: 100%; border: 0; filter: grayscale(.4); }
+  .strip { display: none; height: clamp(220px, 32vw, 380px); background-image: url("images/banner.jpg"), linear-gradient(135deg, #6b5a49, #3a322b); }
 
-  /* Footer */
-  footer { background: var(--ink); color: rgba(255,255,255,.6); padding: 72px 0 28px; font-size: 15px; }
-  .foot-grid { display: grid; grid-template-columns: 1.4fr 1fr 1.2fr; gap: 48px; padding-bottom: 48px; border-bottom: 1px solid rgba(255,255,255,.1); }
-  footer h4 { font-family: var(--serif); color: var(--white); font-size: 21px; font-weight: 600; margin-bottom: 18px; }
-  footer ul { list-style: none; display: grid; gap: 10px; }
-  footer a:hover { color: var(--gold-light); }
-  .foot-about p { margin-top: 18px; max-width: 340px; }
-  .copyright { padding-top: 26px; font-size: 13px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+  /* ---------- Story section ---------- */
+  .story ul { margin: 6px 0 22px 46px; }
+  .story li { font-family: var(--serif); font-size: 21px; color: var(--heading); margin-bottom: 6px; }
 
-  /* Floating buttons */
-  .float { position: fixed; right: 20px; bottom: 20px; z-index: 60; display: flex; flex-direction: column; gap: 12px; }
-  .float a { width: 56px; height: 56px; border-radius: 50%; display: grid; place-items: center; color: var(--white); box-shadow: 0 6px 20px rgba(0,0,0,.25); transition: transform .2s; }
-  .float a:hover { transform: scale(1.08); }
+  /* ---------- Services ---------- */
+  .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; margin-top: 10px; }
+  .service { border-top: 4px solid var(--red); background: var(--soft); padding: 30px 26px; }
+  .service svg { width: 44px; height: 44px; color: var(--red); margin-bottom: 14px; }
+  .service h4 { font-size: 26px; margin-bottom: 8px; }
+  .service p { font-size: 16px; margin: 0; color: var(--muted); }
+
+  /* ---------- Project collage ---------- */
+  .gallery { display: grid; grid-template-columns: 1fr 1.25fr 1.35fr; grid-auto-rows: 210px; gap: 12px; }
+  .tile { position: relative; overflow: hidden; background-color: #4a4038; background-size: cover; background-position: center; }
+  .tile.r2 { grid-row: span 2; }
+  .tile .ph { position: absolute; inset: 0; display: grid; place-items: center; background: linear-gradient(150deg, #6a5a4b, #3a322b); }
+  .tile .ph svg { width: 56%; opacity: .45; }
+  .tile.has-photo .ph { display: none; }
+  .tile figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 30px 16px 12px; background: linear-gradient(transparent, rgba(0,0,0,.7)); color: #fff; font-family: var(--serif); font-size: 20px; }
+  .tile figcaption small { display: block; font-family: var(--sans); font-size: 13px; opacity: .85; }
+  .note { font-size: 15px; color: var(--muted); margin-top: 14px; }
+
+  /* ---------- Before / after slider ---------- */
+  .ba { position: relative; aspect-ratio: 16/10; overflow: hidden; user-select: none; background: #2b2622; }
+  .ba .side { position: absolute; inset: 0; background-size: cover; background-position: center; }
+  .ba .after { background-image: url("images/after.jpg"), linear-gradient(135deg, #7a6550, #3e342b); }
+  .ba .before { background-image: url("images/before.jpg"), linear-gradient(#1f3550, #1f3550); clip-path: inset(0 50% 0 0); }
+  .ba .side svg { position: absolute; inset: 0; margin: auto; width: 70%; height: 80%; }
+  .ba .label { position: absolute; top: 16px; padding: 5px 12px; background: rgba(0,0,0,.55); color: #fff; font-family: var(--serif); font-size: 18px; }
+  .ba .before .label { left: 16px; }
+  .ba .after .label { right: 16px; }
+  .ba .handle { position: absolute; top: 0; bottom: 0; left: 50%; width: 3px; background: #fff; transform: translateX(-50%); pointer-events: none; }
+  .ba .handle::after { content: "◂ ▸"; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); background: #fff; color: var(--red); font-size: 16px; padding: 8px 10px; border-radius: 30px; white-space: nowrap; }
+  .ba input { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: ew-resize; margin: 0; }
+
+  /* ---------- Process ---------- */
+  .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; counter-reset: s; }
+  .step::before { counter-increment: s; content: counter(s); display: grid; place-items: center; width: 46px; height: 46px; border-radius: 50%; background: var(--red); color: #fff; font-family: var(--serif); font-size: 24px; margin-bottom: 14px; }
+  .step h4 { font-size: 24px; margin-bottom: 6px; }
+  .step p { font-size: 16px; color: var(--muted); }
+
+  /* ---------- Quote form ---------- */
+  .quote { background: var(--soft); }
+  .quote-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 56px; align-items: start; }
+  .quote-head { font-family: var(--serif); font-size: 28px; color: var(--heading); text-align: center; margin: 4px 0 16px; }
+  .row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .field { margin-bottom: 16px; }
+  label { display: block; font-family: var(--serif); font-size: 19px; color: var(--heading); margin-bottom: 6px; }
+  input, select, textarea { width: 100%; padding: 13px 16px; font: inherit; font-size: 16px; font-weight: 400; color: var(--text); background: #fff; border: 1.5px solid #c9d3de; border-radius: 0; outline: none; appearance: none; }
+  select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%239a1a1f' stroke-width='1.6' fill='none'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 16px center; padding-right: 40px; }
+  input:focus, select:focus, textarea:focus { border-color: var(--red); }
+  textarea { min-height: 110px; resize: vertical; }
+  .form-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+  .form-actions .btn { flex: 1 1 210px; }
+  .error { color: var(--red); font-size: 15px; margin-top: 10px; display: none; font-weight: 400; }
+  .contact-box { background: #fff; padding: 30px; border-top: 4px solid var(--red); }
+  .contact-box h3 { font-size: 30px; }
+  .contact-line { display: flex; gap: 14px; align-items: flex-start; padding: 12px 0; border-bottom: 1px solid var(--line); text-decoration: none; font-size: 16.5px; }
+  .contact-line:last-of-type { border-bottom: 0; }
+  .contact-line svg { flex: 0 0 22px; width: 22px; height: 22px; color: var(--red); margin-top: 3px; }
+  .contact-line b { display: block; font-family: var(--serif); font-size: 19px; color: var(--heading); font-weight: 700; }
+  .contact-line span { word-break: break-word; }
+  .map { margin-top: 18px; height: 220px; background: var(--line); }
+  .map iframe { width: 100%; height: 100%; border: 0; }
+
+  /* ---------- Red footer ---------- */
+  footer { background: var(--red); color: #fff; padding: 52px 0 30px; }
+  .foot-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; }
+  footer h4 { color: #fff; font-size: 27px; font-weight: 500; margin-bottom: 14px; }
+  footer ul { list-style: none; display: grid; gap: 8px; }
+  footer li, footer a { font-size: 16.5px; font-weight: 400; color: #fff; }
+  footer a:hover { opacity: .75; }
+  .copy { margin-top: 44px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: 15px; font-weight: 400; }
+
+  /* Floating call & WhatsApp */
+  .float { position: fixed; right: 18px; bottom: 18px; z-index: 60; display: flex; flex-direction: column; gap: 12px; }
+  .float a { width: 56px; height: 56px; border-radius: 50%; display: grid; place-items: center; color: #fff; box-shadow: 0 6px 18px rgba(0,0,0,.28); }
   .float svg { width: 26px; height: 26px; }
-  .float .f-call { background: var(--gold); }
-  .float .f-wa { background: #25d366; }
+  .f-wa { background: #25d366; }
+  .f-call { background: var(--red); }
 
-  /* Reveal animation */
-  .reveal { opacity: 0; transform: translateY(24px); transition: opacity .8s, transform .8s; }
-  .reveal.in { opacity: 1; transform: none; }
-
-  @media (max-width: 980px) {
-    section { padding: 76px 0; }
-    .services-grid { grid-template-columns: repeat(2, 1fr); }
-    .about-grid, .quote-grid { grid-template-columns: 1fr; gap: 56px; }
-    .about-visual { max-width: 480px; aspect-ratio: 4/3; }
-    .steps { grid-template-columns: repeat(2, 1fr); }
-    .projects-grid { grid-template-columns: repeat(2, 1fr); }
-    .project.tall { grid-row: auto; aspect-ratio: 4/3; }
+  @media (max-width: 960px) {
+    .services-grid { grid-template-columns: 1fr 1fr; }
+    .steps { grid-template-columns: 1fr 1fr; }
+    .quote-grid { grid-template-columns: 1fr; }
     .foot-grid { grid-template-columns: 1fr 1fr; }
-    .foot-about { grid-column: 1 / -1; }
-    .hero-drawing { opacity: .25; }
+    .gallery { grid-template-columns: 1fr 1fr; grid-auto-rows: 200px; }
   }
   @media (max-width: 860px) {
     .menu-btn { display: block; }
-    .nav-links { position: fixed; inset: 84px 0 auto 0; background: var(--ink); flex-direction: column; align-items: stretch; gap: 0; padding: 8px 24px 24px; display: none; }
+    .nav-links { position: absolute; top: 100%; left: 0; right: 0; background: var(--red); flex-direction: column; align-items: stretch; gap: 0; padding: 4px 24px 20px; display: none; border-top: 1px solid rgba(255,255,255,.15); }
     .nav-links.open { display: flex; }
-    .nav-links li a { display: block; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,.08); }
-    .nav-call { margin-top: 14px; text-align: center; border-bottom: 1px solid var(--gold) !important; }
-    header { background: rgba(20,24,31,.97); }
+    .nav-links a { display: block; padding: 13px 0; border-bottom: 1px solid rgba(255,255,255,.12); }
+    .nav-call { margin-top: 14px; text-align: center; border-bottom: 0 !important; }
   }
   @media (max-width: 600px) {
+    body { font-size: 17px; }
     .wrap { padding: 0 16px; }
-    .nav { height: 72px; }
-    .nav-links { inset: 72px 0 auto 0; }
-    .brand-name { font-size: 18px; }
-    .brand-mark { width: 38px; height: 38px; font-size: 20px; }
-    .hero { padding: 120px 0 80px; }
-    .hero-actions .btn { flex: 1 1 100%; }
-    .hero-stats { gap: 28px; }
-    .services-grid, .steps, .projects-grid, .row, .foot-grid { grid-template-columns: 1fr; }
-    .service { padding: 36px 26px; }
-    form { padding: 28px 20px; }
-    .about-badge { left: 0; }
-    .about-visual .frame { inset: 14px -10px -14px 14px; }
+    .nav { height: 74px; }
+    .brand b { font-size: 26px; }
+    .brand small { font-size: 10px; }
+    section { padding: 54px 0; }
+    .laurel { width: 108px; height: 92px; }
+    .laurel span { font-size: 13px; padding: 0 20px; }
+    .services-grid, .steps, .row, .foot-grid { grid-template-columns: 1fr; }
+    .gallery { grid-template-columns: 1fr; grid-auto-rows: 220px; }
+    .tile.r2 { grid-row: auto; }
+    .story ul { margin-left: 24px; }
+    .ba { aspect-ratio: 4/3; }
     .float a { width: 50px; height: 50px; }
   }
 </style>
 </head>
 <body>
 
-<!-- ============ HEADER ============ -->
-<header id="header">
+<!-- ================= RED TOP MENU ================= -->
+<header>
   <div class="wrap nav">
-    <a href="#home" class="brand" aria-label="Surya Architect and Builders home">
-      <!-- To use your logo: replace this div with <img src="images/logo.png" alt="Surya logo" style="height:44px"> -->
-      <div class="brand-mark">S</div>
-      <div class="brand-name">Surya<small>Architect &amp; Builders</small></div>
-    </a>
+    <!-- To use your logo: replace this <a> content with <img src="images/logo.png" alt="Surya Architect and Builders" style="height:60px"> -->
+    <a href="#home" class="brand"><b>SURYA</b><small>Architect &amp; Builders</small></a>
     <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="active">Home</a></li>
       <li><a href="#services">Services</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#quote">Get a Quote</a></li>
+      <li><a href="#projects">Project Gallery</a></li>
+      <li><a href="#process">How We Work</a></li>
+      <li><a href="#quote">Contact Us</a></li>
       <li><a href="tel:+919291646358" class="nav-call">Call 92916 46358</a></li>
     </ul>
-    <button class="menu-btn" id="menuBtn" aria-label="Open menu">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
-    </button>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 7h18M3 12h18M3 17h18"/></svg></button>
   </div>
 </header>
 
-<!-- ============ HERO ============ -->
-<section class="hero" id="home">
-  <!-- To add a hero photo: save it as images/hero.jpg -->
-  <div class="hero-bg"></div>
-  <div class="hero-grid"></div>
-  <svg class="hero-drawing" viewBox="0 0 600 420" fill="none" stroke="#d9bd7e" stroke-width="1.2" aria-hidden="true">
-    <path d="M40 410V180l140-90 140 90v230"/><path d="M320 410V120h220v290"/>
-    <path d="M30 186L180 88l150 98"/><path d="M310 120h240"/>
-    <rect x="90" y="250" width="50" height="60"/><rect x="220" y="250" width="50" height="60"/><rect x="150" y="330" width="60" height="80"/>
-    <g opacity=".8"><rect x="350" y="150" width="40" height="40"/><rect x="410" y="150" width="40" height="40"/><rect x="470" y="150" width="40" height="40"/>
-    <rect x="350" y="215" width="40" height="40"/><rect x="410" y="215" width="40" height="40"/><rect x="470" y="215" width="40" height="40"/>
-    <rect x="350" y="280" width="40" height="40"/><rect x="410" y="280" width="40" height="40"/><rect x="470" y="280" width="40" height="40"/>
-    <rect x="405" y="345" width="50" height="65"/></g>
-    <path d="M0 410h600" stroke-width="1.6"/>
-    <path d="M40 160V60M320 100V40M540 100V40" stroke-dasharray="4 6" opacity=".6"/>
-    <path d="M30 40h540" stroke-dasharray="4 6" opacity=".6"/>
+<!-- ================= BIG PHOTO HERO ================= -->
+<!-- Photo: images/hero.jpg (a wide photo of your best finished building) -->
+<section class="photo hero" id="home">
+  <svg class="hero-drawing" viewBox="0 0 600 300" fill="none" stroke="#fff" stroke-width="1.4" aria-hidden="true">
+    <path d="M20 290h560"/><path d="M60 290V150l120-80 120 80v140"/><path d="M45 160L180 66l135 94"/>
+    <path d="M300 290V110h240v180"/><path d="M290 112h260"/>
+    <rect x="100" y="200" width="40" height="45"/><rect x="220" y="200" width="40" height="45"/><rect x="155" y="230" width="50" height="60"/>
+    <rect x="330" y="140" width="45" height="40"/><rect x="398" y="140" width="45" height="40"/><rect x="466" y="140" width="45" height="40"/>
+    <rect x="330" y="205" width="45" height="40"/><rect x="466" y="205" width="45" height="40"/><rect x="398" y="215" width="45" height="75"/>
   </svg>
-  <div class="wrap">
-    <div class="hero-content reveal">
-      <span class="eyebrow">Gajwel · Siddipet · Telangana</span>
-      <h1>Designing &amp; building homes that <em>stand for generations</em></h1>
-      <p>From vastu-compliant planning and building permissions to structural design and construction, Surya Architect and Builders takes care of your project from the first drawing to the final handover.</p>
-      <div class="hero-actions">
-        <a href="#quote" class="btn btn-gold">Request a Free Quote</a>
-        <a href="tel:+919291646358" class="btn btn-outline">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
-          Call Now
-        </a>
-      </div>
-      <div class="hero-stats">
-        <div><strong>2018</strong>Building since</div>
-        <div><strong>6</strong>Services under one roof</div>
-        <div><strong>Gajwel</strong>Local office &amp; team</div>
-      </div>
+  <div class="hero-inner">
+    <h1>Trusted Builders in Gajwel Since 2018</h1>
+    <div class="laurels">
+      <div class="laurel"><svg viewBox="0 0 120 106" fill="none" stroke="#fff" stroke-width="2"><path d="M44 98C18 88 6 62 12 34M76 98c26-10 38-36 32-64"/><g fill="#fff" stroke="none"><ellipse cx="14" cy="40" rx="3" ry="8" transform="rotate(-20 14 40)"/><ellipse cx="12" cy="56" rx="3" ry="8" transform="rotate(-40 12 56)"/><ellipse cx="17" cy="71" rx="3" ry="8" transform="rotate(-58 17 71)"/><ellipse cx="27" cy="84" rx="3" ry="8" transform="rotate(-72 27 84)"/><ellipse cx="106" cy="40" rx="3" ry="8" transform="rotate(20 106 40)"/><ellipse cx="108" cy="56" rx="3" ry="8" transform="rotate(40 108 56)"/><ellipse cx="103" cy="71" rx="3" ry="8" transform="rotate(58 103 71)"/><ellipse cx="93" cy="84" rx="3" ry="8" transform="rotate(72 93 84)"/></g></svg><span>Vastu<br>Designs</span></div>
+      <div class="laurel"><svg viewBox="0 0 120 106" fill="none" stroke="#fff" stroke-width="2"><path d="M44 98C18 88 6 62 12 34M76 98c26-10 38-36 32-64"/><g fill="#fff" stroke="none"><ellipse cx="14" cy="40" rx="3" ry="8" transform="rotate(-20 14 40)"/><ellipse cx="12" cy="56" rx="3" ry="8" transform="rotate(-40 12 56)"/><ellipse cx="17" cy="71" rx="3" ry="8" transform="rotate(-58 17 71)"/><ellipse cx="27" cy="84" rx="3" ry="8" transform="rotate(-72 27 84)"/><ellipse cx="106" cy="40" rx="3" ry="8" transform="rotate(20 106 40)"/><ellipse cx="108" cy="56" rx="3" ry="8" transform="rotate(40 108 56)"/><ellipse cx="103" cy="71" rx="3" ry="8" transform="rotate(58 103 71)"/><ellipse cx="93" cy="84" rx="3" ry="8" transform="rotate(72 93 84)"/></g></svg><span>Building<br>Permissions</span></div>
+      <div class="laurel"><svg viewBox="0 0 120 106" fill="none" stroke="#fff" stroke-width="2"><path d="M44 98C18 88 6 62 12 34M76 98c26-10 38-36 32-64"/><g fill="#fff" stroke="none"><ellipse cx="14" cy="40" rx="3" ry="8" transform="rotate(-20 14 40)"/><ellipse cx="12" cy="56" rx="3" ry="8" transform="rotate(-40 12 56)"/><ellipse cx="17" cy="71" rx="3" ry="8" transform="rotate(-58 17 71)"/><ellipse cx="27" cy="84" rx="3" ry="8" transform="rotate(-72 27 84)"/><ellipse cx="106" cy="40" rx="3" ry="8" transform="rotate(20 106 40)"/><ellipse cx="108" cy="56" rx="3" ry="8" transform="rotate(40 108 56)"/><ellipse cx="103" cy="71" rx="3" ry="8" transform="rotate(58 103 71)"/><ellipse cx="93" cy="84" rx="3" ry="8" transform="rotate(72 93 84)"/></g></svg><span>Structural<br>Designs</span></div>
+      <div class="laurel"><svg viewBox="0 0 120 106" fill="none" stroke="#fff" stroke-width="2"><path d="M44 98C18 88 6 62 12 34M76 98c26-10 38-36 32-64"/><g fill="#fff" stroke="none"><ellipse cx="14" cy="40" rx="3" ry="8" transform="rotate(-20 14 40)"/><ellipse cx="12" cy="56" rx="3" ry="8" transform="rotate(-40 12 56)"/><ellipse cx="17" cy="71" rx="3" ry="8" transform="rotate(-58 17 71)"/><ellipse cx="27" cy="84" rx="3" ry="8" transform="rotate(-72 27 84)"/><ellipse cx="106" cy="40" rx="3" ry="8" transform="rotate(20 106 40)"/><ellipse cx="108" cy="56" rx="3" ry="8" transform="rotate(40 108 56)"/><ellipse cx="103" cy="71" rx="3" ry="8" transform="rotate(58 103 71)"/><ellipse cx="93" cy="84" rx="3" ry="8" transform="rotate(72 93 84)"/></g></svg><span>Quality<br>Construction</span></div>
+    </div>
+    <div class="hero-btns">
+      <a href="#quote" class="btn btn-red">Get a Free Quote</a>
+      <a href="tel:+919291646358" class="btn btn-white"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>Call Now</a>
     </div>
   </div>
 </section>
 
-<!-- ============ SERVICES ============ -->
-<section id="services">
+<!-- Second full-width photo: images/banner.jpg -->
+<div class="photo strip" id="strip" aria-hidden="true"></div>
+
+<!-- ================= STORY ================= -->
+<section class="story">
   <div class="wrap">
-    <div class="section-head reveal">
-      <span class="eyebrow">What We Do</span>
-      <h2>Complete services, from plan to possession</h2>
-      <p>One trusted team for every stage of your building, so you never have to run between architects, engineers and offices.</p>
-    </div>
+    <h2>Every Home Has a Story</h2>
+    <p>And every story begins with a dream: a home for your family, a shop for your business, a building that will last for generations. Before you start, you probably have questions like:</p>
+    <ul>
+      <li>"How much will my house cost to build?"</li>
+      <li>"Is my plan correct as per vastu?"</li>
+      <li>"How do I get building permission?"</li>
+      <li>"Is my structure strong and safe?"</li>
+    </ul>
+    <p>At Surya Architect and Builders, we answer these questions every day. Since 2018, families and businesses in Gajwel and Siddipet district have trusted us to plan, design, get approvals for and build their homes, all under one roof.</p>
+  </div>
+</section>
+
+<!-- ================= SERVICES ================= -->
+<section id="services" style="padding-top:0">
+  <div class="wrap">
+    <h3>What We Do</h3>
     <div class="services-grid">
-      <div class="service reveal">
-        <span class="service-num">01</span>
-        <svg class="service-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 42h36M10 42V20l14-10 14 10v22"/><path d="M19 42V30h10v12"/><path d="M4 22L24 7l20 15"/></svg>
-        <h3>Construction</h3>
-        <p>Quality residential and commercial construction using good materials, skilled workers and close supervision at every stage.</p>
-      </div>
-      <div class="service reveal">
-        <span class="service-num">02</span>
-        <svg class="service-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="6" y="6" width="36" height="36"/><path d="M6 20h16v22M22 28h20M30 6v14h12"/><circle cx="14" cy="13" r="1.5"/></svg>
-        <h3>Planning</h3>
-        <p>Practical, well-designed floor plans and elevations made around your plot, your family's needs and your budget.</p>
-      </div>
-      <div class="service reveal">
-        <span class="service-num">03</span>
-        <svg class="service-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 4h18l8 8v32H12z"/><path d="M30 4v8h8"/><path d="M18 22h14M18 28h14M18 34h8"/><circle cx="34" cy="36" r="6"/><path d="M31.5 36l2 2 3-3.5"/></svg>
-        <h3>Building Permissions</h3>
-        <p>We prepare the drawings and documents and handle the approval process for your building permission.</p>
-      </div>
-      <div class="service reveal">
-        <span class="service-num">04</span>
-        <svg class="service-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="24" cy="24" r="18"/><circle cx="24" cy="24" r="6"/><path d="M24 2v8M24 38v8M2 24h8M38 24h8"/><path d="M24 14l2 4h-4z" fill="currentColor"/></svg>
-        <h3>Vastu Designs</h3>
-        <p>Layouts planned according to vastu shastra, with the right placement of entrances, kitchen, pooja room and bedrooms.</p>
-      </div>
-      <div class="service reveal">
-        <span class="service-num">05</span>
-        <svg class="service-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="21" cy="21" r="13"/><path d="M30.5 30.5L43 43"/><path d="M15 21l4 4 8-8"/></svg>
-        <h3>Site Inspections</h3>
-        <p>Careful checks of your plot or ongoing construction to catch problems early and confirm the work is done right.</p>
-      </div>
-      <div class="service reveal">
-        <span class="service-num">06</span>
-        <svg class="service-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 42h36"/><path d="M10 42V12h28v30"/><path d="M10 12l28 30M38 12L10 42M10 27h28M24 12v30"/></svg>
-        <h3>Structural Designs</h3>
-        <p>Safe, strong and cost-effective structural designs for foundations, columns, beams and slabs.</p>
-      </div>
+      <div class="service"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 42h36M10 42V20l14-10 14 10v22"/><path d="M19 42V30h10v12"/></svg><h4>Construction</h4><p>Quality residential and commercial construction with good materials and close supervision.</p></div>
+      <div class="service"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="6" y="6" width="36" height="36"/><path d="M6 20h16v22M22 28h20M30 6v14h12"/></svg><h4>Planning</h4><p>Practical floor plans and elevations designed around your plot, family and budget.</p></div>
+      <div class="service"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 4h18l8 8v32H12z"/><path d="M30 4v8h8M18 22h14M18 28h14M18 34h8"/></svg><h4>Building Permissions</h4><p>We prepare the drawings and documents and handle your building approval.</p></div>
+      <div class="service"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="24" cy="24" r="18"/><circle cx="24" cy="24" r="6"/><path d="M24 2v8M24 38v8M2 24h8M38 24h8"/></svg><h4>Vastu Designs</h4><p>Layouts planned as per vastu shastra: entrance, kitchen, pooja room and bedrooms.</p></div>
+      <div class="service"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="21" cy="21" r="13"/><path d="M30.5 30.5L43 43M15 21l4 4 8-8"/></svg><h4>Site Inspections</h4><p>Careful checks of your plot or ongoing work to catch problems early.</p></div>
+      <div class="service"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 42h36M10 42V12h28v30M10 12l28 30M38 12L10 42M10 27h28M24 12v30"/></svg><h4>Structural Designs</h4><p>Safe, strong and cost-effective designs for foundations, columns, beams and slabs.</p></div>
     </div>
   </div>
 </section>
 
-<!-- ============ ABOUT ============ -->
-<section class="about" id="about">
-  <div class="wrap about-grid">
-    <div class="about-visual reveal">
-      <div class="frame"></div>
-      <!-- To add an office/team photo: replace the svg below with <img src="images/about.jpg" alt="" style="width:100%;height:100%;object-fit:cover"> -->
-      <div class="inner">
-        <svg viewBox="0 0 300 300" fill="none" stroke="#d9bd7e" stroke-width="1.2" aria-hidden="true">
-          <rect x="30" y="30" width="240" height="240"/><path d="M30 130h110v140M140 180h130M190 30v100h80"/>
-          <path d="M140 130v-30M90 130v-40" stroke-dasharray="3 4"/>
-          <path d="M70 270a30 30 0 0 1 30-30" /><path d="M190 180a25 25 0 0 0 25 25"/>
-          <text x="60" y="85" fill="#d9bd7e" stroke="none" font-size="11" font-family="Inter">LIVING</text>
-          <text x="205" y="85" fill="#d9bd7e" stroke="none" font-size="11" font-family="Inter">POOJA</text>
-          <text x="55" y="210" fill="#d9bd7e" stroke="none" font-size="11" font-family="Inter">BEDROOM</text>
-          <text x="180" y="235" fill="#d9bd7e" stroke="none" font-size="11" font-family="Inter">KITCHEN</text>
-          <text x="140" y="160" fill="#d9bd7e" stroke="none" font-size="10" font-family="Inter">N ↑</text>
-        </svg>
-      </div>
-      <div class="about-badge"><strong>2018</strong><span>Established</span></div>
-    </div>
-    <div class="about-text reveal">
-      <span class="eyebrow">About Us</span>
-      <h2>A local team you can trust with your biggest investment</h2>
-      <p>Surya Architect and Builders has served Gajwel and the Siddipet district since 2018. We are architects and builders in one firm, so your design, approvals, structure and construction are all handled by the same people who know your project.</p>
-      <p>Building a home is a big step for any family. We keep it simple, explain every stage clearly, and build with the care we would give our own homes.</p>
-      <ul class="why-list">
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 6L9 17l-5-5"/></svg><div><strong>Everything under one roof</strong><span>Planning, permissions, vastu, structure and construction.</span></div></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 6L9 17l-5-5"/></svg><div><strong>Clear, honest pricing</strong><span>A detailed quote upfront, with no surprises later.</span></div></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 6L9 17l-5-5"/></svg><div><strong>Local knowledge</strong><span>We know the soil, the approvals process and the people in our area.</span></div></li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- ============ PROCESS ============ -->
-<section class="process">
+<!-- ================= PROJECT GALLERY ================= -->
+<!--
+  HOW TO ADD PHOTOS: put photos in the images folder named project1.jpg ... project6.jpg.
+  They appear automatically. Change the captions below to your real project names.
+-->
+<section id="projects" style="padding-top:0">
   <div class="wrap">
-    <div class="section-head reveal">
-      <span class="eyebrow">How We Work</span>
-      <h2>Four simple steps to your new building</h2>
-      <p>A clear process, so you always know what's happening next.</p>
+    <h3>Here Are Some of Our Stories</h3>
+    <div class="gallery">
+      <figure class="tile r2" data-photo="images/project1.jpg"><div class="ph"><svg viewBox="0 0 200 200" fill="none" stroke="#fff" stroke-width="1.4"><path d="M30 180V90l70-50 70 50v90"/><path d="M20 96l80-58 80 58"/><rect x="50" y="110" width="30" height="30"/><rect x="120" y="110" width="30" height="30"/><rect x="85" y="140" width="30" height="40"/></svg></div><figcaption>Independent House<small>Residential</small></figcaption></figure>
+      <figure class="tile" data-photo="images/project2.jpg"><div class="ph"><svg viewBox="0 0 200 150" fill="none" stroke="#fff" stroke-width="1.4"><rect x="50" y="20" width="100" height="120"/><path d="M50 50h100M50 80h100M50 110h100M83 20v120M117 20v120"/></svg></div><figcaption>Commercial Building<small>Commercial</small></figcaption></figure>
+      <figure class="tile r2" data-photo="images/project3.jpg"><div class="ph"><svg viewBox="0 0 200 200" fill="none" stroke="#fff" stroke-width="1.4"><path d="M30 180V80h140v100"/><path d="M20 80h160l-20-34H40z"/><rect x="50" y="105" width="28" height="28"/><rect x="122" y="105" width="28" height="28"/><rect x="86" y="125" width="28" height="55"/></svg></div><figcaption>Duplex Villa<small>Residential</small></figcaption></figure>
+      <figure class="tile" data-photo="images/project4.jpg"><div class="ph"><svg viewBox="0 0 200 150" fill="none" stroke="#fff" stroke-width="1.4"><rect x="30" y="20" width="140" height="110"/><path d="M30 70h60v60M90 95h80M120 20v50h50"/></svg></div><figcaption>Vastu Floor Plan<small>Planning &amp; Vastu</small></figcaption></figure>
     </div>
+    <p class="note">More project photos coming soon. Call us to see our completed work.</p>
+  </div>
+</section>
+
+<!-- ================= PLAN TO REALITY (before / after slider) ================= -->
+<!-- Photos: images/before.jpg (the plan/drawing or old building) and images/after.jpg (the finished building) -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <h3>From Plan to Reality</h3>
+    <p>Drag the slider to see how a drawing on paper becomes a finished building.</p>
+    <div class="ba" id="ba">
+      <div class="side after">
+        <svg viewBox="0 0 300 200" fill="none" stroke="#fff" stroke-width="2" opacity=".5"><path d="M10 190h280M40 190V90l90-60 90 60v100"/><path d="M28 98l102-72 102 72"/><rect x="70" y="120" width="35" height="35" fill="rgba(255,255,255,.15)"/><rect x="160" y="120" width="35" height="35" fill="rgba(255,255,255,.15)"/><rect x="113" y="140" width="34" height="50" fill="rgba(255,255,255,.15)"/><path d="M220 190V110h60v80"/></svg>
+        <span class="label">After</span>
+      </div>
+      <div class="side before" id="baBefore">
+        <svg viewBox="0 0 300 200" fill="none" stroke="#bcd4f0" stroke-width="1.2"><path d="M10 190h280M40 190V90l90-60 90 60v100"/><path d="M28 98l102-72 102 72"/><rect x="70" y="120" width="35" height="35"/><rect x="160" y="120" width="35" height="35"/><rect x="113" y="140" width="34" height="50"/><path d="M220 190V110h60v80"/><path d="M40 30v50M220 30v50M40 40h180" stroke-dasharray="3 4"/><text x="110" y="36" fill="#bcd4f0" stroke="none" font-size="10" font-family="Open Sans">12.0 m</text></svg>
+        <span class="label">Plan</span>
+      </div>
+      <div class="handle" id="baHandle"></div>
+      <input type="range" min="0" max="100" value="50" id="baRange" aria-label="Compare plan and finished building">
+    </div>
+  </div>
+</section>
+
+<!-- ================= HOW WE WORK ================= -->
+<section id="process" style="padding-top:0">
+  <div class="wrap">
+    <h3>How We Work</h3>
     <div class="steps">
-      <div class="step reveal"><h3>Consultation</h3><p>We meet, visit your site and understand your needs, budget and timeline.</p></div>
-      <div class="step reveal"><h3>Design &amp; Vastu</h3><p>We prepare plans, elevations and structural designs, with vastu built in.</p></div>
-      <div class="step reveal"><h3>Approvals</h3><p>We handle the paperwork and get your building permission sanctioned.</p></div>
-      <div class="step reveal"><h3>Build &amp; Handover</h3><p>We construct with regular site inspections and hand over the keys.</p></div>
+      <div class="step"><h4>Consultation</h4><p>We visit your site and understand your needs, budget and timeline.</p></div>
+      <div class="step"><h4>Design &amp; Vastu</h4><p>Plans, elevations and structural designs, with vastu built in.</p></div>
+      <div class="step"><h4>Approvals</h4><p>We handle the paperwork and get your building permission.</p></div>
+      <div class="step"><h4>Build &amp; Handover</h4><p>We build with regular site inspections and hand over the keys.</p></div>
     </div>
   </div>
 </section>
 
-<!-- ============ PROJECTS ============ -->
-<section id="projects">
-  <div class="wrap">
-    <div class="projects-head">
-      <div class="section-head reveal">
-        <span class="eyebrow">Our Work</span>
-        <h2>Featured projects</h2>
-        <p>A look at some of the homes and buildings we have planned and built.</p>
-      </div>
-      <div class="filters reveal">
-        <button class="filter active" data-filter="all">All</button>
-        <button class="filter" data-filter="residential">Residential</button>
-        <button class="filter" data-filter="commercial">Commercial</button>
-        <button class="filter" data-filter="design">Design &amp; Plans</button>
-      </div>
-    </div>
-
-    <!--
-      HOW TO ADD YOUR PHOTOS:
-      1. Put the photo in the "images" folder, e.g. images/project1.jpg
-      2. In a project below, change  class="img placeholder"  to  class="img" style="background-image:url('images/project1.jpg')"
-         and delete the <svg> inside it.
-      3. Change the title and location text.
-    -->
-    <div class="projects-grid" id="projectsGrid">
-      <div class="project tall reveal" data-cat="residential">
-        <div class="img placeholder"><svg viewBox="0 0 200 200" fill="none" stroke="#d9bd7e" stroke-width="1.2"><path d="M30 180V90l70-50 70 50v90"/><path d="M20 96l80-58 80 58"/><rect x="50" y="110" width="30" height="30"/><rect x="120" y="110" width="30" height="30"/><rect x="85" y="140" width="30" height="40"/><path d="M10 180h180"/></svg></div>
-        <div class="project-info"><span>Residential · Gajwel</span><h3>Independent House</h3></div>
-      </div>
-      <div class="project reveal" data-cat="commercial">
-        <div class="img placeholder"><svg viewBox="0 0 200 150" fill="none" stroke="#d9bd7e" stroke-width="1.2"><rect x="50" y="20" width="100" height="120"/><path d="M50 50h100M50 80h100M50 110h100M83 20v120M117 20v120"/><path d="M20 140h160"/></svg></div>
-        <div class="project-info"><span>Commercial</span><h3>Commercial Complex</h3></div>
-      </div>
-      <div class="project reveal" data-cat="design">
-        <div class="img placeholder"><svg viewBox="0 0 200 150" fill="none" stroke="#d9bd7e" stroke-width="1.2"><rect x="30" y="20" width="140" height="110"/><path d="M30 70h60v60M90 95h80M120 20v50h50"/><path d="M60 130a20 20 0 0 1 20-20"/></svg></div>
-        <div class="project-info"><span>Vastu Plan</span><h3>Vastu Floor Plan</h3></div>
-      </div>
-      <div class="project reveal" data-cat="residential">
-        <div class="img placeholder"><svg viewBox="0 0 200 150" fill="none" stroke="#d9bd7e" stroke-width="1.2"><path d="M30 135V65h140v70"/><path d="M20 65h160l-20-30H40z"/><rect x="50" y="85" width="25" height="25"/><rect x="125" y="85" width="25" height="25"/><rect x="88" y="95" width="24" height="40"/><path d="M10 135h180"/></svg></div>
-        <div class="project-info"><span>Residential · Siddipet</span><h3>Duplex Villa</h3></div>
-      </div>
-      <div class="project reveal" data-cat="design">
-        <div class="img placeholder"><svg viewBox="0 0 200 150" fill="none" stroke="#d9bd7e" stroke-width="1.2"><path d="M20 130h160"/><path d="M40 130V30h120v100"/><path d="M40 30l120 100M160 30L40 130M40 80h120M100 30v100"/></svg></div>
-        <div class="project-info"><span>Structural Design</span><h3>Structural Drawings</h3></div>
-      </div>
-    </div>
-    <p class="photo-note">Project photos coming soon. Call us to see more of our completed work.</p>
-  </div>
-</section>
-
-<!-- ============ QUOTE / CONTACT ============ -->
+<!-- ================= QUOTE + CONTACT ================= -->
 <section class="quote" id="quote">
   <div class="wrap quote-grid">
-    <div class="quote-side reveal">
-      <span class="eyebrow">Get in Touch</span>
-      <h2>Let's talk about your project</h2>
+    <form id="quoteForm" novalidate>
+      <h2>Ready to Start Your Project?</h2>
       <p>Tell us about your plot and what you'd like to build. We'll get back to you quickly with a free consultation and quote.</p>
-      <div class="contact-cards">
-        <a href="tel:+919291646358" class="contact-card">
-          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></div>
-          <div><small>Call us</small><strong>+91 92916 46358</strong></div>
-        </a>
-        <a href="mailto:suryabuilders1500@gmail.com" class="contact-card">
-          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="1"/><path d="M2 6l10 7 10-7"/></svg></div>
-          <div><small>Email us</small><strong>suryabuilders1500@gmail.com</strong></div>
-        </a>
-        <a href="https://www.google.com/maps/search/?api=1&query=Airtel+Tower+Gajwel+Siddipet+Telangana" target="_blank" rel="noopener" class="contact-card">
-          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
-          <div><small>Visit our office</small><strong>Near Airtel Tower, Gajwel Town, Siddipet District, Telangana</strong></div>
-        </a>
-      </div>
-    </div>
-
-    <form id="quoteForm" class="reveal" novalidate>
-      <h3>Request a Free Quote</h3>
-      <p>Fill in a few details and send them to us on WhatsApp or by email.</p>
+      <div class="quote-head">Request a Free Quote</div>
       <div class="row">
-        <div class="field"><label for="name">Your Name *</label><input id="name" name="name" required autocomplete="name"></div>
-        <div class="field"><label for="phone">Phone Number *</label><input id="phone" name="phone" type="tel" required autocomplete="tel"></div>
+        <div class="field"><label for="name">Your Name *</label><input id="name" required autocomplete="name" placeholder="e.g., Ramesh Kumar"></div>
+        <div class="field"><label for="phone">Phone Number *</label><input id="phone" type="tel" required autocomplete="tel" placeholder="e.g., 98xxxxxxxx"></div>
       </div>
       <div class="row">
-        <div class="field">
-          <label for="service">Service Needed</label>
-          <select id="service" name="service">
-            <option>Construction</option>
-            <option>Planning</option>
-            <option>Building Permissions</option>
-            <option>Vastu Designs</option>
-            <option>Site Inspections</option>
-            <option>Structural Designs</option>
+        <div class="field"><label for="service">Service Needed</label>
+          <select id="service">
+            <option>Construction</option><option>Planning</option><option>Building Permissions</option>
+            <option>Vastu Designs</option><option>Site Inspections</option><option>Structural Designs</option>
             <option>Complete Project (Plan to Build)</option>
-          </select>
-        </div>
-        <div class="field"><label for="location">Site Location</label><input id="location" name="location" placeholder="e.g. Gajwel"></div>
+          </select></div>
+        <div class="field"><label for="location">Site Location</label><input id="location" placeholder="e.g., Gajwel"></div>
       </div>
-      <div class="field"><label for="plot">Plot Size</label><input id="plot" name="plot" placeholder="e.g. 200 sq. yards, east facing"></div>
-      <div class="field"><label for="msg">Tell us about your project</label><textarea id="msg" name="msg" placeholder="e.g. G+1 house, 3 bedrooms, want to start in 2 months"></textarea></div>
+      <div class="field"><label for="plot">Plot Size</label><input id="plot" placeholder="e.g., 200 sq. yards, east facing"></div>
+      <div class="field"><label for="msg">About Your Project</label><textarea id="msg" placeholder="e.g., G+1 house, 3 bedrooms, want to start in 2 months"></textarea></div>
       <div class="form-actions">
-        <button type="button" class="btn btn-wa" data-send="wa">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.8-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2s.2-1.1.2-1.2-.2-.2-.4-.3z"/></svg>
-          Send on WhatsApp
-        </button>
-        <button type="button" class="btn btn-dark" data-send="email">Send by Email</button>
+        <button type="button" class="btn btn-wa" data-send="wa"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.8-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2s.2-1.1.2-1.2-.2-.2-.4-.3z"/></svg>Send on WhatsApp</button>
+        <button type="button" class="btn btn-steel" data-send="email">Send by Email</button>
       </div>
       <p class="error" id="formError">Please enter your name and phone number.</p>
-      <p class="form-hint">Prefer to talk? Call us directly at <a href="tel:+919291646358" style="color:var(--gold);font-weight:600">92916 46358</a>.</p>
     </form>
+
+    <div class="contact-box">
+      <h3>Contact Us</h3>
+      <a class="contact-line" href="tel:+919291646358"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg><span><b>Call</b>+91 92916 46358</span></a>
+      <a class="contact-line" href="mailto:suryabuilders1500@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16"/><path d="M2 6l10 7 10-7"/></svg><span><b>Email</b>suryabuilders1500@gmail.com</span></a>
+      <a class="contact-line" href="https://www.google.com/maps/search/?api=1&query=Airtel+Tower+Gajwel+Siddipet+Telangana" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg><span><b>Office</b>Near Airtel Tower, Gajwel Town, Siddipet District, Telangana</span></a>
+      <div class="map"><iframe loading="lazy" title="Office location" src="https://maps.google.com/maps?q=Airtel%20Tower%2C%20Gajwel%2C%20Telangana&z=15&output=embed"></iframe></div>
+    </div>
   </div>
 </section>
 
-<!-- ============ MAP ============ -->
-<section class="map" aria-label="Office location map">
-  <iframe loading="lazy" title="Surya Architect and Builders office location" src="https://maps.google.com/maps?q=Airtel%20Tower%2C%20Gajwel%2C%20Telangana&z=15&output=embed"></iframe>
-</section>
-
-<!-- ============ FOOTER ============ -->
+<!-- ================= RED FOOTER ================= -->
 <footer>
   <div class="wrap">
     <div class="foot-grid">
-      <div class="foot-about">
-        <a href="#home" class="brand"><div class="brand-mark">S</div><div class="brand-name">Surya<small>Architect &amp; Builders</small></div></a>
-        <p>Construction, planning, building permissions, vastu designs, site inspections and structural designs in Gajwel since 2018.</p>
-      </div>
-      <div>
-        <h4>Services</h4>
-        <ul>
-          <li><a href="#services">Construction</a></li>
-          <li><a href="#services">Planning</a></li>
-          <li><a href="#services">Building Permissions</a></li>
-          <li><a href="#services">Vastu Designs</a></li>
-          <li><a href="#services">Site Inspections</a></li>
-          <li><a href="#services">Structural Designs</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Contact</h4>
-        <ul>
-          <li><a href="tel:+919291646358">+91 92916 46358</a></li>
-          <li><a href="mailto:suryabuilders1500@gmail.com">suryabuilders1500@gmail.com</a></li>
-          <li>Near Airtel Tower, Gajwel Town,<br>Siddipet District, Telangana</li>
-        </ul>
-      </div>
+      <div><h4>Our Services</h4><ul><li><a href="#services">Construction</a></li><li><a href="#services">Planning</a></li><li><a href="#services">Building Permissions</a></li></ul></div>
+      <div><h4>Design</h4><ul><li><a href="#services">Vastu Designs</a></li><li><a href="#services">Structural Designs</a></li><li><a href="#services">Site Inspections</a></li></ul></div>
+      <div><h4>See Our Work</h4><ul><li><a href="#projects">Project Gallery</a></li><li><a href="#process">How We Work</a></li><li><a href="#quote">Get a Quote</a></li></ul></div>
+      <div><h4>Contact</h4><ul><li><a href="tel:+919291646358">+91 92916 46358</a></li><li><a href="mailto:suryabuilders1500@gmail.com">suryabuilders1500@gmail.com</a></li><li>Near Airtel Tower, Gajwel, Siddipet District, Telangana</li></ul></div>
     </div>
-    <div class="copyright">
-      <span>© <span id="year">2026</span> Surya Architect and Builders. All rights reserved.</span>
-      <span>Gajwel · Siddipet · Telangana</span>
-    </div>
+    <div class="copy"><span>© <span id="year">2026</span> Surya Architect and Builders. All Rights Reserved.</span><span>Serving Gajwel &amp; Siddipet since 2018</span></div>
   </div>
 </footer>
 
-<!-- Floating call & WhatsApp buttons -->
 <div class="float">
-  <a href="https://wa.me/919291646358" target="_blank" rel="noopener" class="f-wa" aria-label="Chat on WhatsApp">
-    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.8-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2s.2-1.1.2-1.2-.2-.2-.4-.3z"/></svg>
-  </a>
-  <a href="tel:+919291646358" class="f-call" aria-label="Call us">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
-  </a>
+  <a href="https://wa.me/919291646358" target="_blank" rel="noopener" class="f-wa" aria-label="Chat on WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.8-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2s.2-1.1.2-1.2-.2-.2-.4-.3z"/></svg></a>
+  <a href="tel:+919291646358" class="f-call" aria-label="Call us"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></a>
 </div>
 
 <script>
   const PHONE = "919291646358";
   const EMAIL = "suryabuilders1500@gmail.com";
 
-  // Header background on scroll
-  const header = document.getElementById("header");
-  const onScroll = () => header.classList.toggle("scrolled", window.scrollY > 40);
-  window.addEventListener("scroll", onScroll); onScroll();
-
   // Mobile menu
   const navLinks = document.getElementById("navLinks");
   document.getElementById("menuBtn").addEventListener("click", () => navLinks.classList.toggle("open"));
   navLinks.querySelectorAll("a").forEach(a => a.addEventListener("click", () => navLinks.classList.remove("open")));
 
-  // Reveal on scroll
-  const io = new IntersectionObserver(entries => entries.forEach(e => {
-    if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
-  }), { threshold: 0.12 });
-  document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+  // Gallery: show a project photo only if the file exists
+  document.querySelectorAll(".tile[data-photo]").forEach(tile => {
+    const img = new Image();
+    img.onload = () => { tile.style.backgroundImage = `url("${tile.dataset.photo}")`; tile.classList.add("has-photo"); };
+    img.src = tile.dataset.photo;
+  });
 
-  // Project filters
-  document.querySelectorAll(".filter").forEach(btn => btn.addEventListener("click", () => {
-    document.querySelectorAll(".filter").forEach(b => b.classList.remove("active"));
-    btn.classList.add("active");
-    const f = btn.dataset.filter;
-    document.querySelectorAll(".project").forEach(p => p.classList.toggle("hide", f !== "all" && p.dataset.cat !== f));
-  }));
+  // Hide placeholder drawings once real photos load
+  [["images/hero.jpg", ".hero-drawing"], ["images/before.jpg", "#baBefore svg"], ["images/after.jpg", ".ba .after svg"]].forEach(([src, sel]) => {
+    const img = new Image();
+    img.onload = () => { const el = document.querySelector(sel); if (el) el.style.display = "none"; };
+    img.src = src;
+  });
+
+  // Second wide photo shows only once images/banner.jpg is added
+  { const img = new Image(); img.onload = () => document.getElementById("strip").style.display = "block"; img.src = "images/banner.jpg"; }
+
+  // Before/after slider
+  const range = document.getElementById("baRange");
+  const before = document.getElementById("baBefore");
+  const handle = document.getElementById("baHandle");
+  const setBA = v => { before.style.clipPath = `inset(0 ${100 - v}% 0 0)`; handle.style.left = v + "%"; };
+  range.addEventListener("input", e => setBA(e.target.value));
 
   // Quote form: sends via WhatsApp or email
   const form = document.getElementById("quoteForm");
